@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Form from './forma/Forma';
+import { Form } from './forma/Forma';
 import ContactList from './contacklisst/Contactlist';
 import { nanoid } from 'nanoid';
 import Filter from './filter/Filter';
