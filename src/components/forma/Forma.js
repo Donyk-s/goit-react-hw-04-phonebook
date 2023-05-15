@@ -8,9 +8,19 @@ export const Form = onSubmit => {
   const [number, setNumber] = useState('');
   const handleChange = event => {
     const { name, value } = event.currentTarget;
-    setNumber(value);
-    setName(value);
+    if (name === 'name') {
+      setName(value);
+    }
+    if (name === 'number') {
+      setNumber(value);
+    }
   };
+
+  // const handleChange = event => {
+  //   const { name, value } = event.currentTarget;
+  //   setNumber(value);
+  //   setName(value);
+  // };
   const handleSubmit = event => {
     event.preventDefault();
     const contact = {
