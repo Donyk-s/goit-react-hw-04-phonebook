@@ -33,14 +33,20 @@ export const Form = ({ onSubmit }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    if (name.includes(' ') || number.includes(' ')) {
+      return;
+    }
+
     const contact = {
       id: nanoid(),
-      name: name,
-      number: number,
+      name: name.trim(),
+      number: number.trim(),
     };
+
     onSubmit(contact);
     reset();
   };
+
   const reset = () => {
     setName('');
     setNumber('');
